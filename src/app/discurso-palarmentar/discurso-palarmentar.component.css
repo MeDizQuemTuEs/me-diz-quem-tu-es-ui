@@ -1,0 +1,170 @@
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+#titulo-discurso {
+  float: left;
+}
+
+#icon-titulo {
+  float: right;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#resumo-discurso {
+  clear: both;
+}
+
+#card-discurso {
+  margin-bottom: 20px;
+}
+
+iframe {
+  border-width: 0px !important;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
+
+html,
+body {
+  background-color: #4b0948;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.9em;
+  margin: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.highlight {
+  background-color: #4b0948;
+  color: white;
+  background-image: linear-gradient(to right, #4b0948 0%, #940b8e 100%);
+}
+
+
+h1 {
+  font-size: 2em;
+  margin: 2em 0 1.5em;
+}
+
+#card-user {
+  transition: all 0.6s ease;
+  display: inline-block;
+  cursor: pointer;
+  width: 300px;
+  height: 160px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+  overflow: hidden;
+  color: #4b0948;
+}
+
+#card-user .header {
+  transition: all 0.6s ease;
+  display: inline-flex;
+  width: 100%;
+  height: 80px;
+  background-color: #ecf0f1;
+}
+
+#card-user .header h4 {
+  width: 100%;
+}
+
+#card-user .avatar {
+  transition: all 0.6s ease;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ecf0f1;
+  border: 5px solid #ecf0f1;
+  display: inline-block;
+  margin-top: -55px;
+  overflow: hidden;
+}
+
+#card-user .avatar img {
+  width: 100%;
+}
+
+#card-user .text {
+  padding: 0 8%;
+  width: 250px;
+  height: 150px;
+}
+
+#card-user .text h3 {
+  margin: 7px 0;
+  transition: all 0.6s ease;
+}
+
+#card-user .text p {
+  line-height: 1.2em;
+  text-align: justify;
+  margin: 20px 0 30px 0;
+}
+
+#card-user .skills {
+  display: inline;
+  position: relative;
+  top: -165px;
+  right: -400px;
+  transition: all 0.6s ease-out;
+}
+
+#card-user .social {
+  padding: 5% 0;
+  background-color: #4b0948;
+  color: #fff;
+}
+
+#card-user .social i {
+  padding: 0 5%;
+  font-size: 1.2em;
+}
+
+#card-user .social i:hover {
+  transition: all 0.6s ease-out;
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+input[type='checkbox']:checked+#card-user {
+  width: 500px;
+  height: 415px;
+  transition: all 0.6s ease;
+}
+
+input[type='checkbox']:checked+#card-user .header {
+  width: 500px;
+}
+
+input[type='checkbox']:checked+#card-user .avatar {
+  margin-left: -350px;
+  transition: all 0.6s ease;
+}
+
+input[type='checkbox']:checked+#card-user .skills {
+  top: -165px;
+  right: -150px;
+  transition: all 0.6s ease;
+}
+
+input[type='checkbox']:checked+#card-user .text h3 {
+  margin-left: -100px;
+  transition: all 0.6s ease;
+}

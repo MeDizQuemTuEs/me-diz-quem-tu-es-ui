@@ -1,0 +1,6 @@
+iframe {
+  border-width: 0px !important;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
