@@ -1,4 +1,8 @@
 
+.discurso-completo{
+  text-align: justify;
+}
+
 #card-user {
   transition: all 0.6s ease;
   display: inline-block;

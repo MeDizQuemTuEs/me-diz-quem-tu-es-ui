@@ -2,34 +2,43 @@
   <h3> Conheça mais seu deputado.</h3>
 </div>
 <div class="container" style="background: #f1f1f1">
-  <ng-select style="color: #4b0948 !important"  [items]="listaDeputados"
-              bindLabel="nome"
-              [clearSearchOnAdd]="true"
-              bindValue="nome"
-              (change)= "onChangeLista($event, selectedCityName)"
-              (clear)	= "onRestartLista()"
-              (click)="onSelectParlamentar($event, selectedCityName)"
-              placeholder="Busque o parlamentar"
-              [(ngModel)]="selectedCityName">
-      <ng-template ng-label-tmp let-item="item">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <ng-select style="color: #4b0948 !important"  [items]="listaDeputados"
+        bindLabel="nome"
+        [clearSearchOnAdd]="true"
+        bindValue="nome"
+        (change)= "onChangeLista($event, selectedCityName)"
+        (clear)	= "onRestartLista()"
+        (click)="onSelectParlamentar($event, selectedCityName)"
+        placeholder="Busque o parlamentar"
+        [(ngModel)]="selectedCityName">
+        <ng-template ng-label-tmp let-item="item">
           <b>{{item.nome}}</b>
-      </ng-template>
-  </ng-select>
+        </ng-template>
+      </ng-select>
+    </div>
+  </div>
+
 
   <br>
-  <div style="color: #4b0948 !important"  *ngFor="let parlamentar of listaDeputados; let i=index ">
+  <div class="row">
+    <div class="col-md-4" style="color: #4b0948 !important"  *ngFor="let parlamentar of listaDeputados; let i=index ">
 
-    <div class="card-deck mb-3 text-center">
-      <div class="card mb-4 box-shadow">
-        <div class="card-header">
-          <h4 style="color: #4b0948 !important"  class="my-0 font-weight-normal">{{parlamentar.nome}}</h4>
-        </div>
-        <div class="card-body">
-          <img [src]="parlamentar.urlFoto" alt="" class="clip-circle" style="margin-bottom: 10px">
-          <button [routerLink]="['parlamentar/detalhes', parlamentar.nome]" type="button" class="btn btn-lg btn-block btn-outline-primary">Mais detalhes</button>
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 style="color: #4b0948 !important"  class="my-0 font-weight-normal">{{parlamentar.nome}}</h4>
+          </div>
+          <div class="card-body">
+            <img [src]="parlamentar.urlFoto" alt="" class="clip-circle" style="margin-bottom: 10px">
+            <button [routerLink]="['parlamentar/detalhes', parlamentar.nome]" type="button" class="btn btn-lg btn-block btn-outline-primary">Mais detalhes</button>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
+
 </div>

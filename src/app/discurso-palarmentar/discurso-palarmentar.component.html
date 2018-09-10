@@ -25,7 +25,8 @@
     <h3>Quem fala parecido com ele?</h3>
   </div>
   <br>
-  <iframe width="100%" height="600" [src]="urlGrafConexoes">
+  <!-- pointer-events:none; -->
+  <iframe  width="100%" height="600" [src]="urlGrafConexoes">
   </iframe>
 
   <br>
@@ -35,9 +36,28 @@
 
   </div>
 
-  <div class="panel-group" id="accordion" *ngFor="let dis of listaDiscusos; let i=index ">
+  <div class="accordion" id="accordionExample">
+    <div class="panel-group" id="accordion" *ngFor="let dis of listaDiscusos; let i=index ">
+        <div id="card-discurso" class="card-header">
+          <div class="panel-heading" id="headingTwo">
+            <h5 class="panel-title">
+              <button class="btn btn-link" type="button" data-toggle="collapse" [attr.data-target]="'#discurso' + (i+1)" aria-expanded="false" aria-controls="headingTwo">
+                  Discurso {{i+1}}
+              </button>
+            </h5>
+          </div>
+          <div id="discurso{{i+1}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div align="justify" class="card-body">
+                {{dis[1]}}
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
 
-    <a data-toggle="collapse" data-parent="#accordion" href="#discurso{{i+1}}">
+  
+<!--
+  <a data-toggle="collapse" data-parent="#accordion" href="#discurso{{i+1}}">
       <div id="card-discurso" class="card-header">
         <div class="panel-heading">
           <h4 class="panel-title">
@@ -55,7 +75,4 @@
         </div>
       </div>
     </a>
-
-
-
-  </div>
+  -->
